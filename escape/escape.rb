@@ -1,8 +1,7 @@
-g = ARGV
-r = ARGV
+g, r = ARGV
 
 result = 2 * ARGV[0].to_f * ARGV[1].to_i
 
-ra = Math.sqrt(result)
+escape = Math.sqrt(result)
 
-puts (ra)
+puts "La velocidad de escape es de #{escape} mts/s"
