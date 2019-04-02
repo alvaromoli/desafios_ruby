@@ -1,4 +1,3 @@
-precio, n_usuarios, n_usuariosP, n_usuariosG, gastos  = ARGV
 
 utilidades = ((ARGV[0].to_i * ARGV[1].to_i) + (ARGV[0].to_i * ARGV[2].to_i * 2)) - ARGV[4].to_i
 
