@@ -14,6 +14,45 @@ if ARGV.length == 1
             opcion_maquina_string = 'tijera'
         end
 
+        #Algoritmo de selección
+        if opcion_usuario == 'piedra'
+            if opcion_maquina_string == 'piedra'
+                puts "Computadora juega piedra\nEmpataste"
+                exit
+            elsif opcion_maquina_string == 'papel'
+                puts "Computadora juega papel\nPerdiste"
+                exit
+            else
+                #opcion_maquina_string = tijera
+                puts "Computadora juega tijera\nGanaste"
+                exit
+            end
+        elsif opcion_usuario == 'papel'
+            if opcion_maquina_string == 'piedra'
+                puts "Computadora juega piedra\nGanaste"
+                exit
+            elsif opcion_maquina_string == 'papel'
+                puts "Computadora juega papel\nEmpataste"
+                exit
+            else
+                #opcion_maquina_string = tijera
+                puts "Computadora juega tijera\nPerdiste"
+                exit
+            end
+        else
+            #Opcion usuario es tijera
+            if opcion_maquina_string == 'piedra'
+                puts "Computadora juega piedra\nGanaste"
+                exit
+            elsif opcion_maquina_string == 'papel'
+                puts "Computadora juega papel\nPerdiste"
+                exit
+            else
+                #opcion_maquina_string = tijera
+                puts "Computadora juega tijera\nEmpataste"
+                exit
+            end
+        end
     else
         puts "La opción debe ser piedra, papel o tijera"
         exit
