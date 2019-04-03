@@ -1,5 +1,5 @@
 #Validación de ARGV para recibir solo 4 elementos
-if ARGV.length < 4 and ARGV.length > 0
+if ARGV.length == 3
     for i in 0 ... ARGV.length
         for j in 0 ... ARGV.length
             if ARGV[i].to_i > ARGV[j].to_i
