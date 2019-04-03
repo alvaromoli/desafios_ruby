@@ -1,5 +1,5 @@
 #Validación de ARGV para recibir solo 4 elementos
-if ARGV.length < 5 and ARGV.length > 2
+if ARGV.length < 4 and ARGV.length > 0
     for i in 0 ... ARGV.length
         for j in 0 ... ARGV.length
             if ARGV[i].to_i > ARGV[j].to_i
@@ -11,5 +11,5 @@ if ARGV.length < 5 and ARGV.length > 2
     end
     puts mayor
 else
-    puts "Los cantidad valores ingresados exceden o son insuficientes, intente ingresar solo 3 o 4 valores"
+    puts "Los cantidad valores ingresados exceden o son insuficientes, intente ingresar solo 3 valores"
 end
