@@ -15,42 +15,37 @@ if ARGV.length == 1
         end
 
         #Algoritmo de selección
-        if opcion_usuario == 'piedra'
-            if opcion_maquina_string == 'piedra'
-                puts "Computadora juega piedra\nEmpataste"
-                exit
-            elsif opcion_maquina_string == 'papel'
-                puts "Computadora juega papel\nPerdiste"
-                exit
-            else
-                #opcion_maquina_string = tijera
-                puts "Computadora juega tijera\nGanaste"
-                exit
-            end
-        elsif opcion_usuario == 'papel'
-            if opcion_maquina_string == 'piedra'
-                puts "Computadora juega piedra\nGanaste"
-                exit
-            elsif opcion_maquina_string == 'papel'
-                puts "Computadora juega papel\nEmpataste"
-                exit
-            else
-                #opcion_maquina_string = tijera
-                puts "Computadora juega tijera\nPerdiste"
-                exit
-            end
+        if opcion_maquina_string == opcion_usuario
+           puts "Computadora juega #{opcion_maquina_string}\nEmpataste"
         else
-            #Opcion usuario es tijera
-            if opcion_maquina_string == 'piedra'
-                puts "Computadora juega piedra\nPerdiste"
-                exit
-            elsif opcion_maquina_string == 'papel'
-                puts "Computadora juega papel\nGanaste"
-                exit
+            if opcion_usuario == 'piedra'
+                if opcion_maquina_string == 'papel'
+                    puts "Computadora juega papel\nPerdiste"
+                    exit
+                else
+                    #opcion_maquina_string = tijera
+                    puts "Computadora juega tijera\nGanaste"
+                    exit
+                end
+            elsif opcion_usuario == 'papel'
+                if opcion_maquina_string == 'piedra'
+                    puts "Computadora juega piedra\nGanaste"
+                    exit
+                else
+                    #opcion_maquina_string = tijera
+                    puts "Computadora juega tijera\nPerdiste"
+                    exit
+                end
             else
-                #opcion_maquina_string = tijera
-                puts "Computadora juega tijera\nEmpataste"
-                exit
+                #Opcion usuario es tijera
+                if opcion_maquina_string == 'piedra'
+                    puts "Computadora juega piedra\nPerdiste"
+                    exit
+                else
+                    #Opcion usuario es papel
+                    puts "Computadora juega papel\nGanaste"
+                    exit
+                end
             end
         end
     else
