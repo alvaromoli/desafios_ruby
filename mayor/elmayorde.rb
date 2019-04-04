@@ -5,7 +5,13 @@ elsif ARGV.length > 0
     mayor = 0
     for i in 0 ... ARGV.length
         for j in 0 ... ARGV.length
-            
+            if ARGV[i].to_i >= ARGV[j].to_i and ARGV[i].to_i >= mayor
+                mayor = ARGV[i].to_i
+            elsif ARGV[j].to_i >= ARGV[i].to_i and ARGV[j].to_i >= mayor
+                mayor = ARGV[j].to_i
+            else
+                mayor = mayor
+            end
         end
     end
     puts mayor
