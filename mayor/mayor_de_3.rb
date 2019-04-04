@@ -1,13 +1,11 @@
 #Validación de ARGV para recibir solo 4 elementos
 if ARGV.length == 3
-    for i in 0 ... ARGV.length
-        for j in 0 ... ARGV.length
-            if ARGV[i].to_i > ARGV[j].to_i
-                mayor = ARGV[i].to_i
-            else
-                mayor = ARGV[j].to_i
-            end
-        end
+    if ARGV[0].to_i >= ARGV[1].to_i and ARGV[0].to_i >= ARGV[2].to_i
+        mayor = ARGV[0].to_i
+    elsif ARGV[1].to_i >= ARGV[0].to_i and ARGV[1].to_i >= ARGV[2].to_i 
+        mayor = ARGV[1].to_i
+    else 
+        mayor = ARGV[2].to_i
     end
     puts mayor
 else
