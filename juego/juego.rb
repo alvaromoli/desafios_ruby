@@ -42,10 +42,10 @@ if ARGV.length == 1
         else
             #Opcion usuario es tijera
             if opcion_maquina_string == 'piedra'
-                puts "Computadora juega piedra\nGanaste"
+                puts "Computadora juega piedra\nPerdiste"
                 exit
             elsif opcion_maquina_string == 'papel'
-                puts "Computadora juega papel\nPerdiste"
+                puts "Computadora juega papel\nGanaste"
                 exit
             else
                 #opcion_maquina_string = tijera
