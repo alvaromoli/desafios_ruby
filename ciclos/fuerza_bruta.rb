@@ -4,7 +4,7 @@ def fuerza_bruta (password)
         contador += 1
     end
     #Se le resta el intento encontrado en el for
-    return contador - 1
+    puts "#{contador - 1} intentos"
 end
 
-puts fuerza_bruta(ARGV[0])
+fuerza_bruta(ARGV[0])
