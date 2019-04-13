@@ -1,5 +1,6 @@
 i = 0
-50.times do
+itera = 50
+itera.times do
     puts "Iteración #{i}"
     i = i + 1
 end
