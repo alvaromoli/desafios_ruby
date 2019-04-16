@@ -14,7 +14,7 @@ def compara_arrays (array1, array2)
     else
         mayor = promedio(array2)
     end
-    puts mayor
+    return mayor
 end
 
 

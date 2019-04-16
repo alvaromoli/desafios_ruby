@@ -2,7 +2,7 @@
 def clear_steps (array)
     result = []
     array.map {|x| result.push x[/\d+/]} #expresión regular
-    result
+    return result
 end
 
 
