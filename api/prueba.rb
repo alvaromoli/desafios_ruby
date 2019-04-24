@@ -27,16 +27,18 @@ def photos_count(data)
 end
 
 def buid_web_page(data)
-    html = "<html><head>Curiosity</head><body><ul>"
+    html = "<html>\n<head>\nCuriosity\n</head>\n<body>\n<ul>\n"
     data.each do |photo|
-        html += "<li><img src='" + photo["img_src"] + "'></li>"
+        html += "\t<li><img src='" + photo["img_src"] + "'></li>\n"
     end
-    html += "</ul></body></html>"
+    html += "</ul>\n</body>\n</html>"
 
     File.write('index.html', html)
 end
 
-
+data = request("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000", "DEMO_KEY")
+data = data["photos"]
+buid_web_page(data)
 
 
 
