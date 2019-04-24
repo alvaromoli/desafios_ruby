@@ -31,8 +31,6 @@ def buid_web_page(data)
     data.each do |photo|
         html += "<li><img src='" + photo["img_src"] + "'></li>"
     end
-                        #<li><img src='.../398380645PRCLF0030000CCAM04010L1.PNG'></li>
-                        #<li><img src='.../398381687EDR_F0030000CCAM05010M_.JPG'></li>
     html += "</ul></body></html>"
 
     File.write('index.html', html)
