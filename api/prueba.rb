@@ -36,11 +36,6 @@ def buid_web_page(data)
     File.write('index.html', html)
 end
 
-#63a0qd5YfwFAtV8oFl5UfqNa8UrlDvcUaeNvNs1g
-
-
-data = request("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000", "63a0qd5YfwFAtV8oFl5UfqNa8UrlDvcUaeNvNs1g")
-data = data["photos"]
 
 
 
