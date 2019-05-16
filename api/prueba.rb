@@ -27,7 +27,7 @@ def photos_count(data)
 end
 
 def buid_web_page(data)
-    html = "<html>\n<head>\nCuriosity\n</head>\n<body>\n<ul>\n"
+    html = "<html>\n<head>\n</head>\n<body>\n<ul>\n"
     data.each do |photo|
         html += "\t<li><img src='" + photo["img_src"] + "'></li>\n"
     end
